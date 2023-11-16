@@ -25,6 +25,9 @@
       "renovate",
       "meta",
       "maybe"
-    ]
+    ],
+    "files.associations": {
+      "exception": "cpp"
+    }
   }
 }
