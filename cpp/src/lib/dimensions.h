@@ -1,3 +1,7 @@
+#pragma once
+
+#include "units.h"
+
 enum Inclusion
 {
     Floor,
@@ -10,24 +14,24 @@ class Dimensions
 {
 public:
     Dimensions();
-    Dimensions(float length, float width, float height);
+    Dimensions(Unit length, Unit width, Unit height);
 
-    float get_length();
-    void set_length(float room_length);
+    Unit get_length();
+    void set_length(Unit room_length);
 
-    float get_width();
-    void set_width(float room_width);
+    Unit get_width();
+    void set_width(Unit room_width);
 
-    float get_height();
-    void set_height(float room_height);
+    Unit get_height();
+    void set_height(Unit room_height);
 
-    float volume();
-    float surface_area(Inclusion include_options);
+    Unit volume();
+    Unit surface_area(Inclusion include_options);
 
 private:
-    float length;
-    float width;
-    float height;
+    Unit length;
+    Unit width;
+    Unit height;
 
     int inclusion_modifier(Inclusion inclusion);
 };

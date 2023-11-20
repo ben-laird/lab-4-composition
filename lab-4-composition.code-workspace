@@ -27,7 +27,8 @@
       "maybe"
     ],
     "files.associations": {
-      "exception": "cpp"
+      "exception": "cpp",
+      "unordered_map": "cpp"
     }
   }
 }

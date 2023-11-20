@@ -1,3 +1,5 @@
+#pragma once
+
 #include "dimensions.h"
 #include "paint_info.h"
 
@@ -19,9 +21,9 @@ public:
     PaintInfo get_paint_info();
     void set_paint_info(PaintInfo paint_info);
 
-    float get_hours();
-    float get_gallons();
-    float get_total_price();
+    Unit get_hours(Inclusion inclusion);
+    Unit get_gallons(Inclusion inclusion);
+    Unit get_total_price(Inclusion inclusion);
 
 private:
     Dimensions dims;

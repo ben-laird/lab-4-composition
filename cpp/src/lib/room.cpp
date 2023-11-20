@@ -1,6 +1,8 @@
-#include "utils.hpp"
+#include "errors.h"
 
 #include "room.h"
+
+const Unit GALLONS_PER_HOUR = {2, {{"gallons", 1}, {"hours", -1}}};
 
 Room::Room()
 {
@@ -34,20 +36,17 @@ void Room::set_paint_info(PaintInfo paint_info)
     info = paint_info;
 }
 
-float Room::get_hours()
+Unit Room::get_hours(Inclusion inclusion)
 {
-    throw Todo();
-    return 0.0f;
+    return get_gallons(inclusion) * GALLONS_PER_HOUR;
 }
 
-float Room::get_gallons()
+Unit Room::get_gallons(Inclusion inclusion)
 {
-    throw Todo();
-    return 0.0f;
+    return get_dimensions().surface_area(inclusion) * get_paint_info().get_coats_needed();
 }
 
-float Room::get_total_price()
+Unit Room::get_total_price(Inclusion inclusion)
 {
-    throw Todo();
-    return 0.0f;
+    return get_gallons(inclusion) * get_paint_info().get_price_per_gallon();
 }

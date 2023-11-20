@@ -1,16 +1,20 @@
+#pragma once
+
+#include "units.h"
+
 class PaintInfo
 {
 public:
     PaintInfo();
-    PaintInfo(float price_per_gallon, int coats_needed);
+    PaintInfo(Unit price_per_gallon, int coats_needed);
 
     int get_coats_needed();
     void set_coats_needed(int coats_needed_to_cover);
 
-    float get_price_per_gallon();
-    void set_price_per_gallon(float price);
+    Unit get_price_per_gallon();
+    void set_price_per_gallon(Unit price);
 
 private:
-    float price_per_gallon;
+    Unit price_per_gallon;
     int coats_needed;
 };
