@@ -28,7 +28,13 @@
     ],
     "files.associations": {
       "exception": "cpp",
-      "unordered_map": "cpp"
+      "unordered_map": "cpp",
+      "bitset": "cpp",
+      "system_error": "cpp",
+      "typeinfo": "cpp",
+      "memory_resource": "cpp",
+      "string": "cpp",
+      "variant": "cpp"
     }
   }
 }

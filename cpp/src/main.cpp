@@ -1,10 +1,10 @@
-#include <iostream>
-
-#include "lib/room.h"
+#include "lib/app.h"
 
 void app()
 {
-    std::cout << "Hello World!";
+    App A({});
+
+    A.run();
 }
 
 int main()
