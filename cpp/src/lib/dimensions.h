@@ -2,12 +2,17 @@
 
 #include "units.h"
 
-enum Inclusion
+struct Inclusion
 {
-    Floor,
-    Ceiling,
-    Both,
-    Neither,
+    enum
+    {
+        Floor,
+        Ceiling,
+        Both,
+        Neither,
+    } inclusion;
+
+    int mod();
 };
 
 class Dimensions
@@ -32,6 +37,4 @@ private:
     Unit length;
     Unit width;
     Unit height;
-
-    int inclusion_modifier(Inclusion inclusion);
 };

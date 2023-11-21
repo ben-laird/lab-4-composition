@@ -49,16 +49,16 @@ Unit Dimensions::volume()
     return length * width * height;
 }
 
-Unit Dimensions::surface_area(Inclusion include_options)
+Unit Dimensions::surface_area(Inclusion inclusion)
 {
     Unit floor_ceiling_area = length * width;
     Unit wall_hw_area = height * width;
     Unit wall_hl_area = height * length;
 
-    return 2.0f * wall_hl_area + 2.0f * wall_hw_area + (float)inclusion_modifier(include_options) * floor_ceiling_area;
+    return 2.0f * wall_hl_area + 2.0f * wall_hw_area + (float)inclusion.mod() * floor_ceiling_area;
 }
 
-int Dimensions::inclusion_modifier(Inclusion inclusion)
+int Inclusion::mod()
 {
     switch (inclusion)
     {
